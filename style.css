@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: yellow;
+}
+.container {
+    font-size: 16px;
+    background-color: #ffffff;
+    width: 90vw;
+    max-width: 42em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+}
+
+.hide {
+    display: none !important;
+}
+
+/* HOME SCREEN */
+#home-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    font-family: Georgia, serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 1rem;
+}
+.home-image {
+    width: 260px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 2rem;
+}
+.menu-btn {
+    background: yellow;
+    color: white;
+    border: 2px solid #444;
+    padding: 0.7rem 1.5rem;
+    margin: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0 #444;
+    transition: 0.15s;
+}
+.menu-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* RULES SCREEN */
+#rules-screen {
+    width: 100%;
+}
+.rules-box {
+    background: white;
+    padding: 1rem 0;
+}
+.rules-box h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 1.6rem;
+}
+.rules-box ol {
+    padding-left: 2.5rem;
+}
+.rules-box li {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+#back-btn {
+    margin-left: 0;
+    margin-top: 2rem;
+}
+
+/* GAME SCREEN */
+#options-container {
+    text-align: center;
+}
+#options-container div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6em;
+    margin: 1.2em 0 2.4em 0;
+}
+#options-container button {
+    padding: 0.6em 1.2em;
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0.3em;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+#options-container button:disabled {
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #efefef;
+}
+#options-container button.active {
+    background-color: yellow;
+    border: 3px solid #000000;
+    color: #ffffff;
+}
+.letter-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+.letter-row {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+}
+#letter-container button {
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 0.3em;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.new-game-popup {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.6em;
+}
+#user-input-section {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
+    margin: 0.6em 0 1.2em 0;
+    gap: 0.2em;
+}
+canvas {
+    display: block;
+    margin: auto;
+    border: 8px solid yellow;
+    border-radius: 6px;
+}
+#result-text h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
+#result-text p {
+    font-size: 1.25em;
+    margin: 1em 0 2em 0;
+}
+#result-text span {
+    font-weight: 600;
+}
+#new-game-button {
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    background-color: yellow;
+    border: 3px solid #000000;
+    color: #ffffff;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+.win-msg {
+    color: #39d78d;
+}
+.lose-msg {
+    color: #fe5152;
+}

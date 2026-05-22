@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+
+    <!-- HOME SCREEN -->
+    <div id="home-screen">
+        <h1 class="title">HANG MAN</h1>
+        <img src="hangman_image.png" class="home-image" alt="hangman" />
+        <button id="play-btn" class="menu-btn">PLAY GAME</button>
+        <button id="rules-btn" class="menu-btn">RULES</button>
+    </div>
+
+    <!-- RULES SCREEN -->
+    <div id="rules-screen" class="hide">
+        <div class="rules-box">
+            <h1>Rules of Hangman:-</h1>
+            <ol>
+                <li>You need to guess the word by suggesting letters.</li>
+                <li>You have a limited number of incorrect guesses.</li>
+                <li>For each incorrect guess, a part of the hangman will be drawn.</li>
+                <li>If the hangman is fully drawn before you guess the word, you lose.</li>
+                <li>If you guess the word before the hangman is fully drawn, you win!</li>
+            </ol>
+            <button id="back-btn" class="menu-btn">BACK</button>
+        </div>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="game-screen" class="hide">
+        <div id="options-container"></div>
+        <div id="letter-container" class="letter-container hide"></div>
+        <div id="user-input-section"></div>
+        <canvas id="canvas" width="300" height="150"></canvas>
+        <div id="new-game-container" class="new-game-popup hide">
+            <div id="result-text"></div>
+            <button id="new-game-button">NEW GAME</button>
+        </div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
